@@ -85,12 +85,23 @@ const CharacterList = ({ onSelect }: { onSelect: (id: string) => void }) => {
           </motion.div>
         ))}
       </motion.div>
-      <button className="bg-green-500 py-2 px-4 rounded mt-4" style={{ fontFamily: "Creepster" }} onClick={() => setPage((p) => p - 1)}>
-        Page Arrière
-      </button>
-      <button className="bg-green-500 py-2 px-4 rounded mt-4" style={{ fontFamily: "Creepster" }} onClick={() => setPage((p) => p + 1)}>
-        Page Suivante
-      </button>
+       <div className="flex justify-center gap-4 mt-4">
+        <button 
+          className="bg-green-500 py-2 px-4 rounded" 
+          style={{ fontFamily: "Creepster" }} 
+          onClick={() => setPage((p) => p - 1)}
+          disabled={page === 1} // Désactiver si on est déjà à la première page
+        >
+          Page Arrière
+        </button>
+        <button 
+          className="bg-green-500 py-2 px-4 rounded" 
+          style={{ fontFamily: "Creepster" }} 
+          onClick={() => setPage((p) => p + 1)}
+        >
+          Page Suivante
+        </button>
+      </div>
     </div>
   );
 };
