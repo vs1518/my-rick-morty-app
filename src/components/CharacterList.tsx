@@ -85,6 +85,9 @@ const CharacterList = ({ onSelect }: { onSelect: (id: string) => void }) => {
           </motion.div>
         ))}
       </motion.div>
+      <button className="bg-green-500 py-2 px-4 rounded mt-4" style={{ fontFamily: "Creepster" }} onClick={() => setPage((p) => p - 1)}>
+        Page Arrière
+      </button>
       <button className="bg-green-500 py-2 px-4 rounded mt-4" style={{ fontFamily: "Creepster" }} onClick={() => setPage((p) => p + 1)}>
         Page Suivante
       </button>
